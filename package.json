@@ -1,0 +1,52 @@
+{
+  "name": "Ninekpx",
+  "private": true,
+  "dependencies": {
+    "@babel/preset-env": "^7.0.0-beta.51",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.2",
+    "babel-preset-react": "^6.24.1",
+    "file-loader": "^1.1.6",
+    "lodash": "^4.17.10",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-fontawesome": "^1.6.1",
+    "react-redux": "^5.0.6",
+    "react-router-dom": "^4.2.2",
+    "redux": "^3.7.2",
+    "redux-logger": "^3.0.6",
+    "redux-thunk": "^2.2.0",
+    "webpack": "^3.10.0"
+  },
+  "description": "Use 'npm run dev' to get started with development",
+  "version": "1.0.0",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack --mode development --watch",
+    "dev": "webpack --mode development --watch",
+    "build": "webpack --mode production",
+    "postinstall": "webpack -p"
+  },
+  "engines": {
+    "node": "6.10.1",
+    "npm": "3.10.10"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wrudnicki16/9kpx.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wrudnicki16/9kpx/issues"
+  },
+  "homepage": "https://github.com/wrudnicki16/9kpx#readme",
+  "devDependencies": {
+    "babel-preset-env": "^1.7.0"
+  }
+}
