@@ -17,5 +17,5 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   const root = document.querySelector('#root');
 
-  ReactDOM.render(<h1>Welcome to 9kpx</h1>, root);
+  ReactDOM.render(<Root store={store} />, root);
 });
