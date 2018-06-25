@@ -42,4 +42,26 @@ class User < ApplicationRecord
     user = User.find_by(username: username)
     user && user.valid_password?(password) ? user : nil
   end
+
+  # def get_following
+  #   Follows.all.where(follower_id: self.id)
+  # end
+  
+  # def get_followed_by
+  #   Follows.all.where(followee_id: self.id)
+  # end
+
+  # def get_followed_count
+  #   get_followed.length # better way?
+  # end
+
+  # def get_following_count
+  #   get_following.length # is there a better way to do this?
+  # end
+
+  # def get_affection
+
+  # end
+
+
 end
