@@ -1,0 +1,1 @@
+// same as session until you get follow/like ajax calls.

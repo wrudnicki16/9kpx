@@ -5,7 +5,7 @@ import userReducer from './user/user_reducer';
 // import likeReducer from './like/like_reducer';
 
 export default combineReducers({
-  user: userReducer,
+  // user: userReducer,
   // photo: photoReducer,
   // follow: followReducer,
   // lke: likeReducer
