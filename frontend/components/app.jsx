@@ -1,10 +1,15 @@
 import React from 'react';
+import Landing from './landing';
+import { Switch, Route } from 'react-router-dom';
 
 class App extends React.Component {
+  // start building nav out.
   render() {
     return (
-      "My app is getting started!"
-    );
+      <Switch>
+        <Route path="/" component={Landing}></Route>
+      </Switch>
+    )
   }
 }
 
