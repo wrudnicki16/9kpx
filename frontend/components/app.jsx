@@ -8,6 +8,11 @@ class App extends React.Component {
     return (
       <Switch>
         <Route path="/" component={Landing}></Route>
+        {/* <Route path="/login" component={SessionForm}></Route> */}
+        {/* <Route path="/signup" component={SessionForm}></Route> */}
+        {/* <Route path="/photos/new" component={PhotosForm}></Route> */}
+        {/* <Route path="/photos/:photoId" component={PhotoShow}></Route> */}
+        {/* <Route path="/username" component={UserShow}></Route> */}
       </Switch>
     )
   }

@@ -6,14 +6,14 @@ export const signup = (user) => {
   });
 }
 
-export const signin = () => {
+export const login = () => {
   return $.ajax({
     method: 'POST',
     url: '/api/session'
   });
 }
 
-export const signout = () => {
+export const logout = () => {
   return $.ajax({
     method: 'DELETE',
     url: '/api/session'

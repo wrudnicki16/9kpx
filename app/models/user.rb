@@ -51,14 +51,6 @@ class User < ApplicationRecord
   #   Follows.all.where(followee_id: self.id)
   # end
 
-  # def get_followed_count
-  #   get_followed.length # better way?
-  # end
-
-  # def get_following_count
-  #   get_following.length # is there a better way to do this?
-  # end
-
   # def get_affection
 
   # end

@@ -12,6 +12,8 @@ const Landing = () => {
       <Link to="/"><h1>9kpx</h1></Link>
       {/* <Link to="/discovery"> */}
       <Greeting />
+      {/* <Top10Photos (regularRoute)/> */}
+      {/* <AllFollowingPhotosChronological (authRoute)/> */}
     </div>
   )
 }

@@ -17,14 +17,14 @@ export const receiveCurrentUser = (currentUser) => {
   }
 }
 
-export const signin = (user) => {
-  return SessionAPIUtil.signin(user)
+export const login = (user) => {
+  return SessionAPIUtil.login(user)
     .then((user1) => dispatch(receiveCurrentUser(user1))
           , err => dispatch(receiveErrors(err.responseJSON)));
 }
 
-export const signout = () => {
-  return SessionAPIUtil.signout()
+export const logout = () => {
+  return SessionAPIUtil.logout()
     .then(() => dispatch(receiveCurrentUser(null))
           , err => dispatch(receiveErrors(err.responseJSON)));
 }
