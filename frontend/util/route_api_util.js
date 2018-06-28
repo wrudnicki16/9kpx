@@ -19,9 +19,6 @@ import { connect } from 'react-redux';
 // Instead they just know what to render based on the state of the app, so they will need
 // currentUser passed down.
 
-// login/signup
-// Auth Routes
-
 // Discovery pages
 // all besides /editors, incorporate followers into the general mix if user is logged in
 // follow/like buttons are the same but protected (redirect when user not logged in)
@@ -62,6 +59,7 @@ const ProtectedAuth = ({component: Component, path, currentUser, exact}) => {
   } />;
 };
 
+// used to help break up logic into separate components for loggedIn/Out at the App level.
 const DualAuth = ({loggedInComponent: LoggedInComponent, 
                   loggedOutComponent: LoggedOutComponent, path, currentUser, exact}) => {
   return <Route path={path} exact={exact} render={(props) => {
