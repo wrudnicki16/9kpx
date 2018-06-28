@@ -16,7 +16,7 @@ class Greeting extends React.Component {
       <ul>
         <li><Link to="/username">My Profile</Link></li>
         {/* <li><Link onClick={() => logoutAction()} to="/liked">My Liked Photos</Link></li> */}
-        <li><Link to="/signout" onClick={() => logoutAction()}>Sign out</Link></li>
+        <li><Link to="/" onClick={() => logoutAction()}>Sign out</Link></li>
       </ul>
     ) : path === "/login" ? (
       <div className="nav-greeting">

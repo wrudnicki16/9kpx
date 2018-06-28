@@ -47,6 +47,12 @@ class SessionForm extends React.Component {
     });
   }
 
+  handleDemoUser(e) {
+    e.preventDefault();
+    const user = { username: "Demo", password: "password" };
+    this.props.login(user);
+  }
+
   header() {
     if (this.props.formType === 'login') {
       return <h1>Log in to 9kpx</h1>;
@@ -84,7 +90,7 @@ class SessionForm extends React.Component {
       path.replace("/");
     } else {
       return (
-        <form onSubmit={(e) => this.handleSubmit(e)} className="login-form">
+        <form className="login-form">
           { this.renderErrors() }
           { this.header() }
           <input type="text"
@@ -103,6 +109,9 @@ class SessionForm extends React.Component {
               onClick={(e) => this.handleSubmit(e)}
               value={formType.charAt(0).toUpperCase() + formType.slice(1)}
               />
+            <input type="submit"
+              onClick={(e) => this.handleDemoUser(e)}
+              value="Demo" />
           </div>
           {this.navLink()}
         </form>
