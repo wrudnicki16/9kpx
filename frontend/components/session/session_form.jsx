@@ -18,15 +18,33 @@ class SessionForm extends React.Component {
     this.props.clearErrors();
   }
 
+  componentWillReceiveProps(newProps) {
+    if (this.props.match.path !== newProps.match.path) {
+      this.setState({
+        username: "",
+        password: ""
+      })
+    }
+  }
+
   handleChange(e) {
-    e.preventDefault();
+    let type;
+    if (e.target.type === 'password') {
+      this.setState({ password: e.target.value });
+    } else {
+      this.setState({ username: e.target.value });
+    }
   }
 
   handleSubmit(e) {
-    debugger;
     e.preventDefault();
+    // let user = JSON.parse(JSON.stringify({ user: this.state })); --- use for nested
     let user = Object.assign({}, this.state);
     this.props.processForm(user);
+    this.setState({
+      username: "",
+      password: ""
+    });
   }
 
   header() {
@@ -46,10 +64,17 @@ class SessionForm extends React.Component {
   }
 
   renderErrors() {
-    return this.props.errors.map(error => {
-
-    })
-
+    return (
+      <ul>
+        {
+          this.props.errors.map((error, i) => (
+            <li key={`error-${i}`}>
+              { error }
+            </li>
+          ))
+        }
+      </ul>
+    )
   }
 
   render() {
