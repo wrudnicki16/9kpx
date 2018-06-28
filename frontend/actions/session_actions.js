@@ -17,21 +17,21 @@ export const receiveCurrentUser = (currentUser) => {
   }
 }
 
-export const login = (user) => {
-  return SessionAPIUtil.login(user)
-    .then((user1) => dispatch(receiveCurrentUser(user1))
+export const login = (userInfo) => dispatch => {
+  return SessionAPIUtil.login(userInfo)
+    .then((curUserInfo) => dispatch(receiveCurrentUser(curUserInfo))
           , err => dispatch(receiveErrors(err.responseJSON)));
 }
 
-export const logout = () => {
+export const logout = () => dispatch => {
   return SessionAPIUtil.logout()
     .then(() => dispatch(receiveCurrentUser(null))
           , err => dispatch(receiveErrors(err.responseJSON)));
 }
 
-export const signup = (user) => {
-  return SessionAPIUtil.signup(user)
-    .then((user1) => dispatch(receiveCurrentUser(null))
+export const signup = (userInfo) => dispatch => {
+  return SessionAPIUtil.signup(userInfo)
+    .then((curUserInfo) => dispatch(receiveCurrentUser(curUserInfo))
           , err => dispatch(receiveErrors(err.responseJSON)));
 }
 
